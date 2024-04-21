@@ -1,0 +1,79 @@
+body {
+    text-align: center;
+    background-color: black ;
+    color: whitesmoke;
+}
+.phone{
+    display: none ;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    border: 5px solid white;
+    margin: 2rem ;
+}
+.red {
+    background-color: #d95980;
+}
+.purpol {
+    background-color: purple;
+}
+.yello {
+    background-color: #f99b45;
+}
+.green {
+    background-color: #63aac0;
+}
+.flsh {
+    background-color: #fff;
+}
+.btn-start{
+    font-size: 1.7em;
+    background: linear-gradient(to right, red , purple);
+    color: white ;
+    border: 2px solid white;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    body {
+        background-color: blue;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+       
+    }
+    .btn {
+        width: 90px;
+        height: 90px;
+        border-radius: 10%;
+        border: 3px solid white;
+        margin: 2rem ;
+    }.phone{
+        display: contents ;
+    }
+    .Pc{
+        display: none ;
+    }
+}

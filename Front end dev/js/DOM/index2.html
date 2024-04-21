@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Univercity</title>
+</head>
+<body>
+    <h1>Lista de Universidades</h1>
+    <input type="text" name="" id="" placeholder="Enter of Univercity Name">
+    <button>Search</button>
+    <ul></ul>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+<script>
+
+let url = 'http://universities.hipolabs.com/search?name=';
+let btn = document.querySelector('button');
+
+
+btn.addEventListener('click',async () => {
+    let country = document.querySelector('input').value;
+    console.log(country);
+    let colArr = await get(country);
+    show(colArr);
+});
+
+function show(colArr) {
+    let ul = document.querySelector('ul');
+    ul.innerHTML = ''; 
+    for (col of colArr) {
+        let li = document.createElement('li');
+        li.textContent = col.name;
+        ul.appendChild(li);
+    }
+}
+
+
+async function get (country) {
+    try {
+        let res = await axios.get(url+country);
+        return res.data;
+    } catch (error) {
+        return [];    
+    }
+}
+</script>
+
+</body>
+</html>

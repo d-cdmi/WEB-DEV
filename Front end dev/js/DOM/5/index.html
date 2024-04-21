@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body>
+    <!-- <h1>Cat Fact here:</h1>
+    <button>Get Cat Fact!</button>
+    <p id="reults"></p> -->
+
+    <h1>Dog Image: </h1>
+    <br><br>
+    <button id="btn">Get Dog Image!</button>
+    <br><br>
+    <img src="https://images.dog.ceo/breeds/weimaraner/n02092339_6548.jpg" id="img" alt="" width="400" height="400">
+
+    
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+<script>
+        
+// let url = "https://icanhazdadjoke.com/"
+
+
+// async function jock () {
+//     try {
+//         const config = {headers:{Accept:"application/json"}}
+//         let res = await axios.get(url,config);
+//         console.log(res.data.joke);
+//     } catch (error) {
+//         console.log(error);
+//     }
+
+// }
+
+
+    
+    
+    
+    
+    
+// Dog image random
+let btn = document.querySelector('button');
+btn.addEventListener('click', async ()=> {
+    let res = await get();
+    let img = document.querySelector('img');
+    img.src = res;
+} );
+let url = 'https://dog.ceo/api/breeds/image/random';
+async function get() {
+    try {
+        let res = await axios.get(url);
+        return res.data.message;
+       
+    } catch(err) {
+        console.log(err);
+        return "/";
+    }
+}
+    
+    
+//cat fact
+// let btn = document.querySelector('button');
+// btn.addEventListener('click', async ()=> {
+//     let res = await get();
+//     let p = document.querySelector('#reults');
+//     p.innerText = res;
+// } );
+
+
+// let url = 'https://catfact.ninja/fact';
+// async function get() {
+//     try {
+//         let res = await axios.get(url);
+//         console.log(res.data.fact);
+//         return res.data.fact;
+//     } catch(err) {
+//         console.log(err);
+//         return err;
+//     }
+// }
+
+// fetch(url)
+// .then((res)=>{
+//     return res.json()
+// })
+// .then((data)=>{
+//     console.log(data.fact);
+// })
+// .catch((err)=>{
+//     console.log(err);
+// })
+
+
+// async function rendom () {
+//     let d = await fetch(url);
+//     d = await d.json();
+//     console.log(d.fact);
+// }
+// rendom();
+
+
+</script>
+
+</body>
+</html>

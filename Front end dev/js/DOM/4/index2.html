@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hell</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+
+// function saveTodb(data,succur,err) {
+//     let con = Math.floor(Math.random() * 10) + 1;
+//     if (con > 4) {
+//         succur();   
+//     } else {
+//         err();     
+//     }
+// }
+
+// saveTodb("dhuvish",()=>{
+//     console.log("Data Saved");
+//     saveTodb("lathiya",()=>{
+//             console.log("Data Saved");
+//         },()=>{
+//             console.log("Error");
+//         });
+// },()=>{
+//     console.log("Error");
+// });
+
+
+
+function saveTodb(data) {
+    return new Promise((resoul,reject)=>{
+        let con = Math.floor(Math.random() * 10) + 1;
+        if (con > 4) {
+            resoul("Succesfully savaged data");
+        } else {
+            reject("Failer of data");
+        }
+    });
+}
+//old
+// let request = saveTodb("Hello word");
+// request.then((data)=>{
+//     console.log("Data was Saved");
+// })
+// .catch(()=>{
+//     console.log("Error");
+// });
+
+
+//new version
+
+// saveTodb("dhruvish")
+// .then((data)=>{
+//     console.log("Data was Saved");
+//     saveTodb("lathiya").then(()=> {
+//         console.log("Data2 was Saved");
+//     })
+// })
+// .catch(()=>{
+//     console.log("Error");
+// })
+//promition  chaining
+
+saveTodb("dhruvish")
+.then((result)=>{
+    console.log("Data was Saved : "+result);
+    return saveTodb("lathiya")
+})
+.then((result) => {
+    console.log("Data2 was Saved : "+result);
+    return saveTodb("Hello")
+})
+.then((result) => {
+    console.log("Data3 was Saved : "+result);
+})
+.catch((erro)=>{
+    console.log("Error :"+erro);
+})
+
+
+
+
+
+</script>
+
+</body>
+</html>

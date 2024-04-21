@@ -1,0 +1,31 @@
+
+.contian {
+
+    height : 100vh;
+    background-color: red;
+    border: 2px solid black;
+    display: flexbox;
+
+
+    /* box-shadow: 3px 3px 20px blue; */
+    
+}
+
+.item1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+}
+.item2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(7, 56, 56);
+    border: 2px solid black;
+}
+.item3 {
+    width: 100px;
+    height: 100px;
+    background-color:brown ;
+    border: 2px solid black;
+}

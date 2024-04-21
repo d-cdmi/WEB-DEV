@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.img {
+    position: relative ;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(88, 88, 195);
+    padding: 3px;
+    margin-bottom: 10px;
+}
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in;
+    position: relative;
+}
+.main::before {
+    content: "";
+    position: absolute;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: rgb(88, 88, 195);
+    top: 0;
+    left: 0;    
+}
+.main:hover{
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+}
+.img .profile {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 3px solid #fff;
+}
+.text-data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+}
+.text-data .name{
+    font-size: 22px;
+    font-weight: 600;
+}
+.text-data .job{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 6px;
+}
+.media-btn{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.media-btn .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff ;
+    font-size: 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 8px;
+    background-color: rgb(173, 173, 222);
+       font-size: 20px;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+.buttons .button {
+    background-color: rgb(73, 73, 226);
+    color: white;
+    padding: 5px 10px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buttons .button:hover {
+    background-color:  rgb(97, 97, 246);
+  
+}
+.main .analytic{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.main .analytic .data {
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #e7e7e7e7;
+}
+.data box-icon{
+    font-size: 20px;
+    margin: 6px;
+}
+.data:last-child{
+    border: 0 none 0 none;
+}

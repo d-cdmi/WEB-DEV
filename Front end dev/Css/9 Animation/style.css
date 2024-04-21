@@ -1,0 +1,53 @@
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+
+    /* animation-name: fontAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: o;
+    animation-iteration-count: 3;
+    animation-direction: alternate; */
+
+    /* animation: fontAnimation 3s ease-in 0s 2 alternate fill-mode; */
+    /* animation: colAnimation 3s ease-in 0s 2 alternate ; */
+}
+
+/* @keyframes fontAnimation {
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 40px;
+    }
+}
+@keyframes colAnimation {
+    0%{
+        background-color: red;
+    }
+    50%{
+        background-color: yellow;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@media (min-width:1500px){
+    div{
+        background-color: chartreuse;
+        width: 400px;
+        height: 400px;
+    }
+    h1{
+        font-size: 100px;
+    }
+} */
+
+@media (orientation: landscape) {
+    h1{
+        background-color: red;
+        color: wheat;
+    }
+}

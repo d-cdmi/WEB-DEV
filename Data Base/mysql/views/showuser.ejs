@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show User</title>
+</head>
+
+<body>
+    <h1>List of User In Data base <button><a href="/add">Add a New user</a></button></h1>
+    <table border="1" cellspacing="0">
+        <tr>
+
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>&nbsp;&nbsp;Edit&nbsp;&nbsp;</th>
+            <th>&nbsp;&nbsp;Delete&nbsp;&nbsp;</th>
+        </tr>
+
+        <% for (data of datas) { %>
+            <tr>
+                <th>
+                    <%= data.id %>
+                </th>
+                <th>
+                    <%= data.username %>
+                </th>
+                <th>
+                    <%= data.email %>
+                </th>
+                <th>
+                    <form action="/edit/<%= data.id %>">
+                        <button>Edit</button>
+                    </form>
+                </th>
+                <th>
+                    <form action="/delete/<%= data.id %>">
+                        <button>Delete</button>
+                    </form>
+                </th>
+            </tr>
+            <%}%>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back hell</title>
+</head>
+<body>
+    
+    <h1>Dhruvish Lathiya</h1>
+
+<script>
+
+
+h1 = document.querySelector('h1');
+
+// function changeColor(scolor,deley,nextColorChange) {
+//     setTimeout(() => {
+//         h1.style.color = scolor;
+//         if (nextColorChange) {console.log(nextColorChange())}
+//     }, deley);
+// }
+
+// changeColor('red',1000,()=>{
+//     changeColor('green',1000,()=>{
+//         changeColor('blue',1000,()=>{
+//             changeColor('yellow',1000,()=>{
+//                 changeColor('red',1000,()=>{
+//                     changeColor('black',1000) 
+//                 });
+//             });
+//         });
+//     })
+// });
+
+function changeColor(scolor,deley) {
+    return new Promise((resoul,reject) => {
+        setTimeout(() => {
+            let ram = Math.floor(Math.random() * 5 ) + 1;
+            if (ram > 3) {
+                reject("Failer of data");
+            } 
+            h1.style.color = scolor;
+            resoul("color is change");
+        }, deley);
+    });
+}
+
+async function demo() {
+    try{
+        await changeColor('red',1000);
+        await changeColor('green',1000);
+        await changeColor('blue',1000);
+        await changeColor('yellow',1000);
+        await changeColor('red',1000);
+        await changeColor('black',1000);
+    } catch(err) {
+        let a = 10;
+        console.log(err+"  "+a);
+    }
+     
+}
+
+
+
+
+// changeColor('yellow',1000)
+// .then(() => {
+//     console.log('ok');
+//     return changeColor('green',1000);
+// })
+// .then(()=>{
+//     console.log('ok');
+//     return changeColor('blue',1000);
+// })
+// .then(()=>{
+//     console.log('ok');
+//     return changeColor('yellow',1000);
+// })
+// .then(()=>{
+//     console.log('changeColor');
+// });
+
+
+
+
+
+</script>
+
+</body>
+</html>

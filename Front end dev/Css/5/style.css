@@ -1,0 +1,36 @@
+section{
+    margin-top: 100px;
+}
+div{
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    background-color: #aaa874;
+    /* border: 2px solid black; */
+    margin: 10px auto;
+    box-shadow: 2px 2px 8px black;
+
+}
+/* div:nth-of-type(2n){
+    background-color: #f7db6a;
+}
+div:nth-of-type(3n) {
+    background-color: #ebb02b;
+} */
+
+/* transfrom */
+/* 
+#one{
+    transform: rotate(180deg);
+}
+#two {
+    transform: scale(0.5);
+}
+#three {
+    transform: translateX(-500px );
+}
+#four{
+    transform: skew(10deg);
+} */
+
+
